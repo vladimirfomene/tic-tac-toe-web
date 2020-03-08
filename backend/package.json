@@ -1,0 +1,18 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend server for Tic Tac Toe game.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Jest",
+    "Express.js",
+    "MySQL",
+    "Objection.js",
+    "Docker"
+  ],
+  "author": "Vladimir Fomene",
+  "license": "ISC"
+}
