@@ -18,6 +18,7 @@
   "author": "Vladimir Fomene",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "knex": "^0.20.11",
     "mysql": "^2.18.1",
