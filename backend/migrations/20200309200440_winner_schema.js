@@ -8,7 +8,7 @@ exports.up = function(knex) {
         table.integer("aiScore");
         table.datetime("createdAt");
         table.datetime("updatedAt");
-      });
+    });
 };
 
 exports.down = function(knex) {
