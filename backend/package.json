@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "test": "jest",
-    "lint": "npx eslint . --fix"
+    "lint": "npx eslint . --fix",
+    "db-migrate": "knex migrate:latest"
   },
   "keywords": [
     "Jest",
