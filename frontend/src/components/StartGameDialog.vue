@@ -28,6 +28,16 @@ export default {
   },
   methods: {
     startGame() {
+      if(this.playerName === ""){
+        alert("Please enter your name to start the game");
+        return;
+      }
+
+      if(this.playerSymbol !== "o" && this.playerSymbol !== "x"){
+        alert("Please choose a symbol");
+        return;
+      }
+
       let players = [
         {
           name: this.playerName,
