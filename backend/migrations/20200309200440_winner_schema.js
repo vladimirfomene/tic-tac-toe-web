@@ -1,4 +1,6 @@
-
+/**
+ * Create winners table
+ */
 exports.up = function(knex) {
     return knex.schema.createTable("winners", table => {
         table.increments("winnerId").primary();
@@ -11,6 +13,9 @@ exports.up = function(knex) {
     });
 };
 
+/**
+ * Drop winners table
+ */
 exports.down = function(knex) {
     return knex.schema.dropTableIfExists("winners");
 };
