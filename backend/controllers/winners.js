@@ -1,7 +1,12 @@
 const { Winner } = require("../models/Winner");
 const moment = require("moment");
 
-
+/**
+ * Create an entry in the leaderboard database
+ * @param {Object} req - expressjs request object
+ * @param {Object} res - expressjs response object
+ * @returns - returns JSON object for created winner.
+ */
 exports.createWinner = async (req, res) => {
     try {
       req.body.createdAt = moment().format("YYYY-MM-DD hh:mm:ss");
@@ -13,6 +18,12 @@ exports.createWinner = async (req, res) => {
     }
 };
 
+/**
+ * Get winners from leaderboard database
+ * @param {Object} req - expressjs request object
+ * @param {Object} res - expressjs response object
+ * @returns {Array} - returns array of winners objects
+ */
 exports.getWinners = async (req, res) => {
     try {
         const winners = await Winner.query();
