@@ -4,18 +4,17 @@ let players;
 beforeAll(() => {
   players = [
     {
-        type: "human",
-        name: "vlad",
-        symbol: "o"
+      type: "human",
+      name: "vlad",
+      symbol: "o"
     },
     {
-        type: "ai",
-        name: "computer",
-        symbol: "x"
+      type: "ai",
+      name: "computer",
+      symbol: "x"
     }
   ];
 });
-
 
 describe("testing getWinner...", () => {
   const horizontalGrid = [
@@ -115,7 +114,7 @@ describe("testing findBestMove...", () => {
       ["x", "o", "x"],
       ["o", "o", 9]
     ];
-    
+
     expect(
       ai.findBestMove(startGrid, players[1])
     ).toEqual(1);

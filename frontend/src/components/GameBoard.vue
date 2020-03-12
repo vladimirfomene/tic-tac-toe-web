@@ -28,8 +28,8 @@ export default {
 <style scoped>
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 100px);/*repeat(3, minmax(150px, 1fr));*/
-  grid-template-rows: repeat(3, 100px);/* repeat(3, minmax(150px, 1fr)); */
+  grid-template-columns: repeat(3, 100px); /*repeat(3, minmax(150px, 1fr));*/
+  grid-template-rows: repeat(3, 100px); /* repeat(3, minmax(150px, 1fr)); */
   justify-content: center;
   grid-gap: 2px;
   border-radius: 5px;

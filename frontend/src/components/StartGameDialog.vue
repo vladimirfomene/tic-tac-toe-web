@@ -1,11 +1,7 @@
 <template>
   <div class="start-dialog" v-if="isVisible">
     <div class="field">
-      <input
-        type="text"
-        v-model.trim="playerName"
-        placeholder="Player name"
-      />
+      <input type="text" v-model.trim="playerName" placeholder="Player name" />
     </div>
     <div class="field">
       <select v-model="playerSymbol">

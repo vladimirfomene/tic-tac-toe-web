@@ -38,7 +38,7 @@ export default {
     async play() {
       if (!this.board.isPositionEmpty(this.position)) return;
 
-      if (!localStorage.getItem("players")){
+      if (!localStorage.getItem("players")) {
         alert("Please enter your name and select a symbol to start the game");
         return;
       }
@@ -73,7 +73,6 @@ export default {
         });
         localStorage.removeItem("grid");
         localStorage.removeItem("players");
-        
 
         return location.reload();
       }

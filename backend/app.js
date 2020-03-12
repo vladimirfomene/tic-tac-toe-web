@@ -12,11 +12,11 @@ app.use(cors({ origin: "http://localhost:8080" }));
 app.use(bodyParser.json());
 
 router.route("/winners")
-    .get(winnerController.getWinners)
-    .post(winnerController.createWinner);
+  .get(winnerController.getWinners)
+  .post(winnerController.createWinner);
 
 router.route("/ai")
-    .post(aiController.getAIMove);
+  .post(aiController.getAIMove);
 
 // Mount router
 app.use("/", router);

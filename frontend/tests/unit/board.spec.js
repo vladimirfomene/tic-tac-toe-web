@@ -8,7 +8,7 @@ beforeAll(() => {
 describe("testing buildGrid...", () => {
   test("has grid been created with initial vals", () => {
     const grid = board.buildGrid();
-    
+
     let count = 1;
     for (let i = 0; i < grid.length; i++) {
       for (let j = 0; j < grid[0].length; j++) {
