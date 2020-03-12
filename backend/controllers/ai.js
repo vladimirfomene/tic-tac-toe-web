@@ -15,12 +15,12 @@ const players = [
     {
         type: "human",
         name: "vlad",
-        symbol: ""
+        symbol: "x"
     },
     {
         type: "ai",
         name: "computer",
-        symbol: ""
+        symbol: "o"
     }
 ]
 
@@ -35,11 +35,10 @@ function getAIMove(req, res){
   players[1].symbol = req.body.player.symbol;
   players[0].symbol = (req.body.player.symbol === "o")? "x": "o";
   try{
-      let position = findBestMove (req.body.grid, req.body.player);
-        
-      return res.status(200).json({ position });
+    let position = findBestMove (req.body.grid, req.body.player);  
+    return res.status(200).json({ position });
   }catch (err){
-      return res.status(500).json({ msg: "failed to get AI move"});
+    return res.status(500).json({ msg: "failed to get AI move"});
   }
 }
 
@@ -122,32 +121,31 @@ function minimax(grid, isMaximizer) {
    * @returns {string} - "x", "o" or "tie"
    */
 function getWinner (grid) {
-    let winner = null;
     for (let i = 0; i < grid.length; i++) {
       if (grid[i][0] === grid[i][1] && grid[i][1] === grid[i][2]) {
-        winner = grid[i][0];
+        return grid[i][0];
       }
     }
 
     for (let j = 0; j < grid.length; j++) {
       if (grid[0][j] === grid[1][j] && grid[1][j] === grid[2][j]) {
-        winner = grid[0][j];
+        return grid[0][j];
       }
     }
 
     if (grid[0][0] === grid[1][1] && grid[1][1] === grid[2][2]) {
-      winner = grid[0][0];
+      return grid[0][0];
     }
 
     if (grid[2][0] === grid[1][1] && grid[1][1] === grid[0][2]) {
-      winner = grid[2][0];
+      return grid[2][0];
     }
 
     if (isGridFull(grid)) {
-      winner = "tie";
+      return "tie";
     }
 
-    return winner;
+    return null;
 }
 
 /**
@@ -161,7 +159,7 @@ function  isGridFull(grid) {
       }
     }
     return true;
-  }
+}
 
 /**
    * Gets the score from a winning character
