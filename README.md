@@ -12,10 +12,7 @@ The backend is implemented with Node.js and more specifically with the Express.j
 
 - An endpoint to get the move of the AI. This endpoint is served with a Minimax algorithm which derives the best move for the AI given a board state.
 - An endpoint to get all the entries on the leaderboard in your database.
-- An endpoint to create new entry on the leaderboard.
-
-## Separation Of Concern
-To organize my code so as to maintain a clean codebase, I used the **Model View Controller** architectural pattern to organize the code. 
+- An endpoint to create new entry on the leaderboard. 
 
 ## Testing
 To proof my code, I decided implement unit test both on the frontend and the backend using the Jest testing framework.
